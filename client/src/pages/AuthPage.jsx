@@ -3,9 +3,9 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const AuthPage = (props) => {
-  const [username, setUsername] = useState()
-  const [secret, setSecret] = useState()
-  const [email, setEmail] = useState()
+  const [username, setUsername] = useState('')
+  const [secret, setSecret] = useState('')
+  const [email, setEmail] = useState('')
 
   const onLogin = (e) => {
     e.preventDefault()
@@ -32,12 +32,11 @@ const AuthPage = (props) => {
   }
 
   return (
-    <div class="main">
+    <div className="main">
       <input type="checkbox" id="chk" aria-hidden="true" />
-
-      <div class="signup">
+      <div className="signup">
         <form onSubmit={onSignup}>
-          <label for="chk" aria-hidden="true" onClick={erase}>
+          <label htmlFor='chk' aria-hidden="true" onClick={erase}>
             Sign up
           </label>
           <input
@@ -68,9 +67,9 @@ const AuthPage = (props) => {
         </form>
       </div>
 
-      <div class="login">
+      <div className="login">
         <form onSubmit={onLogin}>
-          <label for="chk" aria-hidden="true" onClick={erase}>
+          <label htmlFor='chk' aria-hidden="true" onClick={erase}>
             Login
           </label>
           <input
